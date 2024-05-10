@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: customers
+    discription: Number of payments for each customer
+
+    columns:
+      - name: customer_id
+        discription: Customer ID (primary key)
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_customers
+    discription: DVDrental's customers
+    columns:
+      - name: customer_id
+        discription: Customer ID (primary key)
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_payments
+    discription: Payments per customer
+    columns:
+      - name: payment_id
+        discription: Payment ID (primary key)
+        tests: 
+          - unique
+          - not_null 
